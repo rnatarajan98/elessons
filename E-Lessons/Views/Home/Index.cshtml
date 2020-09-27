@@ -22,7 +22,7 @@
         {
             <tr>
                 <td>@directory.DirectoryName</td>
-                <td>@Html.ActionLink("View", "Slides", new { directoryName = directory.DirectoryName })</td>
+                <td>@Html.ActionLink("View", "Index", "Slide", new { directoryName = directory.DirectoryName, index = 1 }, null)</td>
             </tr>
         }
     </table>

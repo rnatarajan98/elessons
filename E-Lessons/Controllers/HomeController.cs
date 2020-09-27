@@ -26,16 +26,17 @@ namespace E_Lessons.Controllers
 
 
 
-        public ActionResult Slides(string directoryName)
+
+
+        public ActionResult Slides(string directoryName, int index)
         {
-            var dir = directoryName + "/Export/";
-            var path = Path.Combine(dir, "slide_1.jpg");
+            var slide = new SlideModel { DirectoryName = directoryName, SlideNumber = index };
 
             //return Content(path);
-            return base.File(path, "image/jpeg");
+            return View(slide);
         }
 
-        
+
 
 
     }
